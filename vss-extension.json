@@ -1,10 +1,10 @@
 {
   "manifestVersion": 1,
   "id": "vsts-yaml-writer",
-  "publisher": "jakkaj",
-  "name": "Yaml Writer",
-  "version": "0.21.2",
-  "description": "Feed in parameters to write out yaml to new or existing files",
+  "publisher": "hnuguse",
+  "name": "Custom Yaml Writer",
+  "version": "0.0.1",
+  "description": "Feed in parameters or file to write out yaml to new or existing files",
   "tags": [
     "Extension",
     "Marketplace",
@@ -42,18 +42,18 @@
   },
   "links": {
     "repository": {
-      "uri": "https://github.com/jakkaj/yamlw_vststask"
+      "uri": "https://github.com/hnuguse/yamlw_vststask"
     },
     "issues": {
-      "uri": "https://github.com/jakkaj/yamlw_vststask/issues"
+      "uri": "https://github.com/hnuguse/yamlw_vststask/issues"
     },
     "support": {
-      "uri": "jakkaj@gmail.com"
+      "uri": "h.nuguse@nipo.com"
     }
   },
   "repository": {
     "type": "git",
-    "uri": "https://github.com/jakkaj/yamlw_vststask"
+    "uri": "https://github.com/hnuguse/yamlw_vststask"
   },
   "files": [
     {
@@ -68,7 +68,7 @@
         "ms.vss-distributed-task.tasks"
       ],
       "properties": {
-        "name": "YamlWriter"
+        "name": "CustomYamlWriter"
       }
     }
   ]

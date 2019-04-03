@@ -1,20 +1,18 @@
 var tl = require('vso-task-lib');
-var yamlwriter = require('yamlw');
+var yamlwriter = require('@hnuguse/yamlw/yamlw');
 var fs = require('fs');
 
 (function () {
     'use strict';
     
-    //var echo = new tl.ToolRunner(tl.which('echo', true));
     var file = tl.getInput('file', true);
     var set = tl.getInput('set', true);
-    var dry = tl.getInput('dry', false) == 'true';
-    var json = tl.getInput('json', false) == 'true';
+    var isExternalSet = tl.getInput('external', false) == 'true';
 
     console.log(`File: ${file} (exists: ${fs.existsSync(file)})`);
     console.log(`Settings: ${set}`);
-    console.log(`Dry run: ${dry}`);    
+    console.log(`Use external settings file: ${isExternalSet}`);    
 
-    var result = yamlwriter(file, dry, set, json);
+    var result = yamlwriter(file, set, isExternalSet);
     console.log(`Result:\n ${result}`);    
 }());
